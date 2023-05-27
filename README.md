@@ -24,5 +24,8 @@ one consisting of images of fires in nature and the other containing images of n
 The project demonstrates how CNNs can be employed for image recognition tasks. 
 Additionally, it showcases the concept of "transfer learning," where pre-trained models are utilized to recognize images based on prior experience.
 
-Feel free to explore each project's directory for more details, including source code, datasets, and documentation.
+## Projekt_prva_godina
+Projekt_prva_godina aims to compare the performance of One Stage and Two Stage algorithms. The project focuses on evaluating different architectural approaches and their impact on performance. Two different datasets with varying image qualities were used for the experiment. Several metrics were obtained, including frames per second (fps), average number of objects detected in each image, and average time per image.
+
+Feel free to explore each project for more details, including source code and datasets.
 
