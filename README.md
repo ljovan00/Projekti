@@ -40,9 +40,13 @@ The goal of this visualization is to enable users to easily understand electrici
 
 Technical implementation:
 The visualization is implemented using D3.js. The data was first parsed from CSV format and grouped by hours. Scaling and axes were used for the bar chart to show consumption by hours. The line chart shows consumption trends through the hours, while the pie chart shows the distribution of consumption as a percentage of the total daily consumption.
+
 Application possibilities:
+
 • Planning and optimization of energy consumption
+
 • Identification of periods of high and low consumption
+
 • Making data-driven decisions to reduce energy costs
 
 Feel free to explore each project for more details, including source code and datasets.
