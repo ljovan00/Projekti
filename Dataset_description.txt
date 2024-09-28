@@ -1,0 +1,15 @@
+This is a data set that contains information about electricity consumption in individual households. Here are the general characteristics of the data set:
+
+Attributes:
+
+Date: Date in YYYY-MM-DD format.
+Time: Time in HH:MM:SS format.
+Global_active_power: Total consumption of active electricity in the household in kilowatts.
+Global_reactive_power: Total household reactive electricity consumption in kilowatts.
+Voltage: Mean household voltage in volts.
+Global_intensity: Total current strength in the household in amperes.
+Sub_metering_1, Sub_metering_2, Sub_metering_3: Additional measures of energy consumption in certain areas of the household, such as heating, cooling and household appliances.
+Objective of the problem:
+
+Analysis and prediction of electricity consumption in households based on available attributes.
+This data set can be useful for researching electricity consumption patterns, identifying energy-saving practices, or developing models to predict future consumption. When using a dataset, it is important to conduct additional analysis to better understand your specific project needs and goals.
