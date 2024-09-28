@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Power Consumption Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Gornji levi kut za dugmiće */
+        .year-buttons-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .year-button {
+            margin: 5px;
+            padding: 8px 10px;
+            background-color: #d4e4ff;
+            border: 1px solid #5b9bd5;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .year-button:hover {
+            background-color: #5b9bd5;
+            color: white;
+        }
+
+        .year-button.active {
+            background-color: steelblue;
+            color: white;
+        }
+
+        .main-content {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .chart-container {
+            width: 60%; /* Smanjili smo širinu grafikona da napravimo mesta za tekst */
+            position: relative;
+        }
+
+        .bar-results {
+            width: 30%; /* Širina za prikaz rezultata */
+            margin-left: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dva stupca */
+            gap: 10px;
+        }
+
+        .bar-results div {
+            padding: 5px;
+            font-size: 14px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .slider-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        #timeSlider {
+            width: 100%;
+        }
+
+        .axis--x path {
+            display: none;
+        }
+
+        .axis--y .tick line {
+            stroke: #ddd;
+        }
+
+        .x-axis .tick text, .y-axis .tick text {
+            font-size: 14px;
+        }
+
+        .x-axis-label, .y-axis-label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .chart-title {
+            font-size: 20px;
+            text-anchor: middle;
+        }
+
+        /* Osiguravamo da se donji grafikon proteže preko cele širine */
+        .full-width-chart {
+            width: 100%;
+        }
+    </style>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="graf.js" defer></script>
+</head>
+<body>
+    <h1>Vizualizacija podataka: Projekt</h1>
+    
+    <!-- Gornji levi kut za dugmiće -->
+    <div class="year-buttons-container">
+        <button class="year-button" data-year="2006">2006</button>
+        <button class="year-button" data-year="2007">2007</button>
+        <button class="year-button" data-year="2008">2008</button>
+        <button class="year-button" data-year="2009">2009</button>
+        <button class="year-button" data-year="2010">2010</button>
+    </div>
+
+    <!-- Glavni sadržaj koji sadrži grafikon i rezultate -->
+    <div class="main-content">
+        <div class="chart-container">
+            <div id="chart"></div>
+            <div class="slider-container">
+                <input type="range" id="timeSlider" min="0" max="23" step="1" value="0">
+                <label for="timeSlider">Time: <span id="timeLabel">0</span>:00 - <span id="timeLabelEnd">1</span>:00</label>
+            </div>
+        </div>
+
+        <!-- Ispis podataka sa desne strane grafikona u dva stupca -->
+        <div id="barResults" class="bar-results"></div>
+    </div>
+
+    <!-- Donji grafikon preko cele širine -->
+    <div class="chart-container full-width-chart">
+        <div id="lineChart"></div>
+    </div>
+
+    <div class="chart-container full-width-chart">
+        <div id="scatterPlot"></div>
+    </div>
+    
+
+</body>
+</html>
