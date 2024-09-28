@@ -34,8 +34,10 @@ Description of the selected problem:
 
 
 The project deals with the analysis and visualization of data on electricity consumption with the aim of identifying consumption patterns during the day and year. The problem we are solving is understanding how electricity is used at different times of the day and during different years, which can help optimize energy use and reduce costs.
+
 Visualization goal:
 The goal of this visualization is to enable users to easily understand electricity consumption patterns through interactive graphs and diagrams. The visualization provides an insight into the average consumption per hour during the day for the selected years. Using d3.js library.
+
 Technical implementation:
 The visualization is implemented using D3.js. The data was first parsed from CSV format and grouped by hours. Scaling and axes were used for the bar chart to show consumption by hours. The line chart shows consumption trends through the hours, while the pie chart shows the distribution of consumption as a percentage of the total daily consumption.
 Application possibilities:
