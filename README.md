@@ -52,29 +52,30 @@ Application possibilities:
 ## Named entity recognition (NER) project
 
 This is a project focused on implementing a Named Entity Recognition (NER) system using machine learning techniques. The goal is to classify and label entities within sentences, such as persons (PER), organizations (ORG), locations (LOC), and miscellaneous entities (MISC). The project utilizes a pre-trained model, makes predictions on test data, and evaluates the model's performance using precision, recall, and F1-score.
-Features
 
-Data preprocessing using the conllu library.
+Features:
 
-Model prediction using a pre-trained NER model.
+-Data preprocessing using the conllu library.
 
-Evaluation of model performance using scikit-learn metrics.
+-Model prediction using a pre-trained NER model.
 
-Handles various entity types like persons (PER), organizations (ORG), locations (LOC), and miscellaneous (MISC).
+-Evaluation of model performance using scikit-learn metrics.
+
+-Handles various entity types like persons (PER), organizations (ORG), locations (LOC), and miscellaneous (MISC).
 
 Future Improvements
 
 While the current model achieves reasonable performance, there are several ways to improve the project:
 
-Fine-tuning the Pre-trained Model: The model could benefit from fine-tuning on the specific dataset.
+-Fine-tuning the Pre-trained Model: The model could benefit from fine-tuning on the specific dataset.
 
-Handling Class Imbalance: The model struggles with some entity types (I-loc, I-misc). Applying techniques such as class weighting or oversampling may improve results.
+-Handling Class Imbalance: The model struggles with some entity types (I-loc, I-misc). Applying techniques such as class weighting or oversampling may improve results.
 
-Error Analysis: Perform detailed error analysis to understand where the model misclassifies entities.
+-Error Analysis: Perform detailed error analysis to understand where the model misclassifies entities.
 
-Switch to Transformer Models: Consider using transformer-based models like BERT for improved accuracy, especially on more complex entity types.
+-Switch to Transformer Models: Consider using transformer-based models like BERT for improved accuracy, especially on more complex entity types.
 
-Hyperparameter Tuning: Experiment with different hyperparameters to optimize the model’s performance.
+-Hyperparameter Tuning: Experiment with different hyperparameters to optimize the model’s performance.
 
 ⚠️ Note: The dataset is not included in this repository due to licensing restrictions. However, you can use any NER dataset in CoNLL-U format. Popular options include the CoNLL-2003 dataset or other publicly available datasets.
 
